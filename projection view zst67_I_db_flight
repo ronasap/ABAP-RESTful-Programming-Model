@@ -1,0 +1,19 @@
+@AbapCatalog.sqlViewName: 'ZST67_DB_FLIGHT'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Interface Flight View'
+@Metadata.ignorePropagatedAnnotations: true
+define root view zst67_I_db_flight
+  as select from zst67_flight
+{
+  key carrid    as Carrid,
+  key connid    as Connid,
+      countryfr as CountryFrom,
+      cityfrom  as CityFrom,
+      airpfrom  as AirportFrom,
+      countryto as CountryTo,
+      cityto    as CityTo,
+      airpto    as AirportTo,
+      deptime   as DepTime,
+      arrtime   as ArrTime
+}
