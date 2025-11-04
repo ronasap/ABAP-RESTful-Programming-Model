@@ -1,0 +1,33 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Consumption Flight Details'
+@Metadata.ignorePropagatedAnnotations: true
+@Search.searchable: true
+@Metadata.allowExtensions: true
+
+define root view entity ZST67_C_DB_FLIGHT
+ as projection on zst67_I_db_flight as Flight
+{
+   @EndUserText.label: 'Flight Code'
+   @Search.defaultSearchElement: true
+   key Carrid,
+   @EndUserText.label: 'Connection No.'
+   @Search.defaultSearchElement: true
+   key Connid,
+   @EndUserText.label: 'From Country'
+   CountryFrom,
+   @EndUserText.label: 'From City'
+   CityFrom,
+   @EndUserText.label: 'From Airport'
+   AirportFrom,
+   @EndUserText.label: 'To Country'
+   CountryTo,
+   @EndUserText.label: 'To City'
+   CityTo,
+   @EndUserText.label: 'To Airport'
+   AirportTo,
+   @EndUserText.label: 'Departure Time'
+   DepTime,
+   @EndUserText.label: 'Arrival Time'
+   ArrTime
+}
