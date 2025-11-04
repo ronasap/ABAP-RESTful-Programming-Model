@@ -1,0 +1,20 @@
+@EndUserText.label : 'Flight Detailes'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zst67_flight {
+
+  key client : abap.clnt not null;
+  key carrid : abap.char(3) not null;
+  key connid : abap.clnt not null;
+  countryfr  : abap.char(3);
+  cityfrom   : abap.char(20);
+  airpfrom   : abap.char(3);
+  countryto  : abap.char(3);
+  cityto     : abap.char(20);
+  airpto     : abap.char(3);
+  deptime    : abap.tims;
+  arrtime    : abap.tims;
+
+}
