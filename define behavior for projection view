@@ -1,0 +1,27 @@
+managed implementation in class zbp_st67_i_db_flight unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for zst67_I_db_flight //alias <alias_name>
+persistent table zst67_flight
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  mapping for zst67_flight // need mapping betweendb field & view fields
+    {
+
+      Carrid      = carrid;
+      Connid      = connid;
+      CountryFrom = countryfr;
+      Cityfrom = cityfrom;
+      AirportFrom = airpfrom;
+      CountryTo  = countryto;
+      CityTo      = cityto;
+      Airportto   = airpto;
+      DepTime     = deptime;
+      ArrTime     = arrtime;
+    }
+}
